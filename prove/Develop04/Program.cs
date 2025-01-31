@@ -1,9 +1,8 @@
-using System;
-
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Entry myEntry = new Entry("What’s something new you learned today?", "C# doesn’t use single quotes for strings!");
+        Console.WriteLine(myEntry);
     }
 }
