@@ -14,7 +14,7 @@ class Activity
         Activity_Description = activityDescription;
     }
 
-    public virtual void Start()  // 🔥 Marked as virtual so it can be overridden
+    public virtual void Start()
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {Name} Activity.");

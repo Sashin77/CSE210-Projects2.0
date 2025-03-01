@@ -2,7 +2,7 @@ class BreathingActivity : Activity
 {
     public BreathingActivity() : base("Breathing", "This activity helps you relax by guiding your breathing.") { }
 
-    public override void Start()  // 🔥 Now correctly overrides Start()
+    public override void Start() 
     {
         base.Start();
         for (int i = 0; i < Duration / 6; i++)
