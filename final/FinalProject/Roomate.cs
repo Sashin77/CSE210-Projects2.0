@@ -1,26 +1,21 @@
 using System;
+using System.Collections.Generic;
 
-public class Roommate
+public abstract class Roommate
 {
     public string Name { get; set; }
-    public string Personality { get; set; }
-    public string[] Skills { get; set; }
+    public List<string> Skills { get; set; }
 
-    public Roommate(string name, string personality, string[] skills)
+    public Roommate(string name, List<string> skills)
     {
         Name = name;
-        Personality = personality;
         Skills = skills;
     }
 
-    public void Introduce()
-    {
-        Console.WriteLine($"Hello, I'm {Name}. My personality is {Personality}.");
-        Console.WriteLine("Skills: " + string.Join(", ", Skills));
-    }
+    public abstract void ReactToAction(string action);
 
-    public virtual void DoChores()
+    public virtual void ShowInfo()
     {
-        Console.WriteLine($"{Name} is doing basic chores.");
+        Console.WriteLine($"{Name} has the following skills: {string.Join(", ", Skills)}");
     }
 }
